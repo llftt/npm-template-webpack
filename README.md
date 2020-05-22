@@ -2,7 +2,7 @@
 
 
 ## 
-集成ESLint, Pre
+npm发包模版，使用
 
     
 
