@@ -9,7 +9,7 @@ const umd = {
     output: {
         path: `${__dirname}/dist`,
         filename: 'index.js',
-        library: 'xgplayer-contentprotect-service',
+        library: 'Test',
         libraryTarget: 'umd',
         chunkFilename: '[name].[chunkhash:8].bundle.js',
         publicPath: ''
@@ -19,7 +19,8 @@ const umd = {
         rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                exclude:/node_modules/
             }
         ]
     },
@@ -67,7 +68,7 @@ const client = {
     output: {
         path: `${__dirname}/browser`,
         filename: 'index.js',
-        library: 'XgplayerContentprotectService',
+        library: 'Test',
         libraryTarget: 'window',
         chunkFilename: '[name].[chunkhash:8].bundle.js',
         publicPath: ''
@@ -77,7 +78,8 @@ const client = {
         rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                exclude:/node_modules/
             }
         ]
     },
